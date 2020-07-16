@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assginment qstn2</title>
+    <h1>Assginment qstn2 String and array methods</h1>
+</head>
+<body>
+    <script>
+        //String methods
+        //1.concat
+        let s1="hey everyone ";
+        let s2="welcome to stream";
+        console.log(s1.concat(s2));
+
+        //2.slice---this method returns the parts of string from given beginIndex to endIndex
+        let s3="i am a javascript";
+        console.log(s3.slice(2,5));
+
+        //3.trim--trim method used to remove starting and ending whitespaces
+        let s4="  guys can u hear me  ";
+        console.log(s4);
+        console.log(s4.trim());
+        
+        //4.split method use to split the given string
+        let s5="once again welcome to the js live lessions";
+        console.log(s5.split("again"));
+
+        //5.replace method is used for replacing the string
+        let s6="welcome to java";
+        console.log(s6);
+        console.log(s6.replace("java","javascript"));
+
+       //6.substr methos is used for return the specified string
+       console.log(s6.substr(11,14));
+
+       //7.substring
+        console.log(s6.substring(8,14));
+
+        //8.valueof return the actual value of string object
+        console.log(s6.valueOf());
+        
+
+        //Array methods
+        let a=['mango','apple','bananas','watermelon'];
+        console.log(a);
+        //splice used to delete the array ele..
+        a.splice(1,1);
+        console.log(a);
+        
+        //slice used to copy element from source to destination
+        console.log(a.slice(1,2));
+
+        //sort used for sorting element
+        let no=[1,8,6,3,2,4,7,5,9,10];
+        console.log(no.sort());
+        console.log(a);
+
+        //toString retrun all elemwnt as a string list
+        console.log(a.toString());
+
+        //join all element of array in a string list
+        console.log(a.join('-'));
+
+       //valueof convert the value to the primitive one
+        console.log(a.valueOf());
+
+       //fill the array with static value
+        console.log(a.fill('kiwi'));
+
+        //map method retrun the new array with the results of calling a function for every array element
+        let num=[4,9,16,25,36];
+        console.log(num.map(Math.sqrt));
+    </script>
+</body>
+</html>
