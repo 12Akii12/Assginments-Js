@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day4 Assginment qstn7</title>
+    <h1>Day4 Assginment qstn7 Find the prime number for given entered number </h1>
+</head>
+<body>
+    <script>
+        let num=prompt("entre the number ");
+        nextPrime:
+        for(let i=2; i<=num; i++)
+        {
+            for(let j=2;j<i; j++)
+            {
+                if(i%j== 0)
+                continue nextPrime;
+            }
+            console.log(i);
+        }
+    </script>
+    
+</body>
+</html>

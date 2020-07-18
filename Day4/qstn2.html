@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day4 Assginment qstn2</title>
+    <h1>Day4 Assginment qstn2 destructure the object</h1>
+</head>
+<body>
+    <script>
+        const student={
+            name:"Helsink",
+            age: 24,
+            projects: {
+                diceGame:"two player dice game using Javascript"
+            }
+        }
+        const {name,age,projects:{diceGame}}=student;
+        console.log(name);
+        console.log(age);
+        console.log(diceGame);
+    </script>
+</body>
+</html>

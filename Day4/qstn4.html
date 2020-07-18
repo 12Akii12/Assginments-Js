@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Day4 Assginment qstn4 Simple Calculator</title>
+<h1 align="center">Day4 Assginment qstn4 Make Simple Calculator</h1>
+<script src="calculator.js" type="text/javascript"></script>
+</head>
+<body>
+
+
+<h1 align='center'>My calculator</h1>
+<table border="1" align="center" cellpadding="5" cellspacing="5" width="600">
+<tr align="center">
+<td>First number</td>
+<td>Second Number</td>
+<td>Result</td>
+</tr>
+<tr align="center">
+<td><input name="number1" type="text" size=10 id='num1'/></td>
+<td><input name="number2" type="text" size=10 id='num2'/></td>
+<td> <input type="text" id='result' readonly ></td>
+</tr>
+<tr align="center">
+<td colspan="3">
+<button style="margin: 10px;" onclick="calresult('1')">+</button>
+<button style="margin: 10px;" onclick="calresult('2')">-</button>
+<button style="margin: 10px;" onclick="calresult('3')">*</button>
+<button style="margin: 10px;" onclick="calresult('4')">/</button>
+<button style="margin: 10px;" onclick="calresult('5')">%</button>
+<button style="margin: 10px;" onclick="calresult('6')">n^2</button>
+<button style="margin: 10px;" onclick="clr()">C</button>
+
+</td>
+</tr>
+
+</table>
+</body>
+</html>
