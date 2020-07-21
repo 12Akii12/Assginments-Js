@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day5 Assginment qstn1 Higher order functions</title>
+    <h1>Day5 Assginment qstn1 Higher order functions</h1>
+</head>
+<body>
+    <script>
+        let inputArr=[];
+        let size=6;
+        for(let i=0;i<=size;i++)
+        {
+            inputArr[i]=prompt("enter the array element" +(i+1));
+        }
+        console.log(inputArr);
+        let odd=inputArr.filter(el=>el%2!=0).map(el=>el**3);
+        console.log(odd);
+    </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assginment qstn2 OOps concepts</title>
+    <h1>Day 5 Assginment qstn2 oops concepts</h1>
+</head>
+<body>
+    <script>
+        class User{
+            constructor(name,age,email){
+                this.name=name;
+                this.age=age;
+                this.email=email;
+                this.courses=[];
+            }
+
+            login(){
+                console.log(`${this.name} has logged in`);
+            }
+            logout(){
+                console.log(`${this.name} has logged out`);
+            }
+        }
+
+        class moderator extends User{
+            constructor(name,age,email,role){
+                super(name,age,email);
+                this.role=role;
+                this.coins=0;
+            }
+
+            addCoins(){
+                this.coins++;
+                console.log(`${this.name} has ${this.coins} coins`);
+                return this;
+            }
+
+            deleteCoins(){
+                this.coins--;
+                console.log(`${this.name} has ${this.coins} coins`);
+                return this;
+            }
+        }
+
+
+        class Admin extends moderator{
+            addCourse(user ,course){
+                user.courses.push(course)
+                console.log(user);
+            }
+            deleteCourse(user,course){
+                user.courses.pop(course)
+                console.log(user);
+            }
+        }
+
+
+        let user1 =new User('Ak12',24,'ak@gmail.com');
+        let user2=new User('Ajay',45,'aj@gmail.com');
+        let mod=new moderator('Anik',34,'anik@gmail.com','Moderator');
+        let admin=new Admin('Raju',22,'raju@gmail.com');
+        let users=[user1,user2,mod,admin];
+        users.forEach(ele=>{console.log(ele);});
+
+        user1.login();
+        user2.login();
+        admin.addCourse(user1,'Js');
+        admin.addCourse(user1,'Html');
+
+        admin.addCourse(user2,'java');
+        admin.addCourse(user2,'python');
+
+        admin.deleteCourse(user2,'python');
+
+        mod.addCoins();
+        mod.addCoins();
+        mod.deleteCoins();
+        console.log(users);
+
+        user1.logout();
+        user2.logout();
+    </script>
+</body>
+</html>
