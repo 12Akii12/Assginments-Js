@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day6 Assginment qstn3 Welcome and Toggle Button</title>
+    <style>
+        body {
+            padding: 25px;
+            background-color: white;
+            color: black;
+            font-size: 25px;
+        }
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="time"></h1>
+
+    <button onclick="MyToggle()">Toggle dark mode</button>
+
+
+    <script>
+        let name=prompt("enter user name");
+        document.write(name + " Welcome to Javascript Essential Program ");
+
+        const ctime = document.getElementById('time');
+
+        function clock(){
+            let date=new Date();
+            let time =date.toLocaleTimeString();
+            ctime.innerText=time;
+        }
+
+        setInterval(clock,1000);
+
+        function MyToggle(){
+            var ele=document.body;
+            ele.classList.toggle("dark-mode");
+        }
+
+
+    </script>
+</body>
+</html>
